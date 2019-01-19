@@ -3,22 +3,98 @@
 <head>
 	<title>Video background demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
+		<a class="navbar-brand" href="#">
+		<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		Restaurant
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="menu.html">Menu</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<div class="overlay"></div>
+		<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="video/tomatoes.mp4" type="video/mp4">
+		</video>
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100 text-white">
+					<h1 class="display-3">Restaurant</h1>
+					<h2>An example of a restaurant site</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="formcontainer">
+						<form id="contactForm" name="htmlform" method="post" action="form.php">
+							<label id="warningLabel">All Fields Required</label>
+							<table width="100%">
+								<tr>
+									<td valign="top">
+										<label for="first_name">First Name</label>
+									</td>
+									<td valign="top">
+										<input  id="inputBox" type="text" name="first_name" maxlength="50" size="30">
+									</td>
+								</tr>
+								<tr>
+									<td valign="top">
+										<label for="last_name">Last Name</label>
+									</td>
+									<td valign="top">
+										<input type="text" name="last_name" maxlength="50" size="30">
+									</td>
+								</tr>
+								<tr>
+									<td valign="top">
+										<label for="email">Email Address</label>
+									</td>
+									<td valign="top">
+										<input type="text" name="email" maxlength="80" size="30">
+									</td>
+								</tr>
+								<tr>
+									<td valign="top">
+										<label for="comments">Comments</label>
+									</td>
+									<td valign="top">
+										<textarea id="textBox" name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+									</td>
 
-<video autoplay muted loop id="BG">
-	<source src="video/tomatoes.mp4" type="video/mp4">
-	Your browser does not support HTML5 video.
-</video>
-<div id="main-menu">
-	<img src="img/logo.png" class="logo"/>
-</div>
-
-<div class="overlay">
-	<h1>Lorum Ipsum</h1>
-	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-</div>
+								</tr>
+								<tr>
+									<td colspan="2" style="text-align:center">
+										<input id="submitButton" type="submit" value="Submit">
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>
